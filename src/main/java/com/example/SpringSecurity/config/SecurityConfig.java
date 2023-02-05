@@ -28,10 +28,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
+                .csrf().disable()
+                //also I need to add matchers to be able to perform requests from Authorization controller
                 .authorizeHttpRequests()
-                .anyRequest()
-                .authenticated()
-                .and()
+                   .anyRequest().authenticated()
+                   .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
