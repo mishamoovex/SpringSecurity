@@ -1,4 +1,4 @@
-package com.example.SpringSecurity;
+package com.example.SpringSecurity.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
